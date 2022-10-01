@@ -1,1 +1,2 @@
+// I won A$700 for this one line of code. Work smart, not hard.
 function start(e){Dos(document.getElementById("jsdos")).run(e)}document.getElementById("selection").addEventListener("submit",function(e){e.preventDefault(),confirm('Load file and start playing: "'+document.getElementById("gameselector").value+'"?')&&(document.getElementById("selection").style.display="none",start(document.getElementById("gameselector").value))});
