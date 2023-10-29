@@ -1,2 +1,11 @@
-// I won A$700 for this one line of code. Work smart, not hard.
-function start(e){Dos(document.getElementById("jsdos")).run(e)}document.getElementById("selection").addEventListener("submit",function(e){e.preventDefault(),confirm('Load file and start playing: "'+document.getElementById("gameselector").value+'"?')&&(document.getElementById("selection").style.display="none",start(document.getElementById("gameselector").value))});
+// Effective code that runs js-dos, which won the Replit Creator Fund
+// Sometimes the simplest solutions are the best ones
+document.getElementById("selection").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const game = document.getElementById("gameselector").value;
+    if (!confirm(`Load file and start playing: '${game}'?`)) {
+        return;
+    }
+    document.getElementById("selection").style.display = "none";
+    Dos(document.getElementById("jsdos")).run(game);
+});
